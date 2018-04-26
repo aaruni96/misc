@@ -27,10 +27,10 @@ int main()
 
 int conv(char *inp)
 {
-	int limbo,orig;		//limbo is my temp variable, orig stores the original value
+	int limbo,orig;	//limbo is my temp variable, orig stores the original value
 	for(int i=0;i<int(strlen(inp));i++)
 	{
-		orig=limbo=inp[i]-'A'+1;
+		orig=limbo=(inp[i]-'A'+1);
 		limbo=(limbo*limbo)%('Z'-'A'+1);
 		inp[i]=(orig+limbo)%26;
 		inp[i]+='A'-1;
